@@ -1,4 +1,4 @@
-## Projeto Final ARQWEB1 (parte 1)
+## Projeto Final ARQWEB1
 Repositório destinado à primeira parte do Projeto Final da Disciplina de Desenvolvimento de Sistemas Web 1 – ARQWEB1
 
 ### Integrantes:
