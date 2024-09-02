@@ -1,0 +1,120 @@
+/* Estilo do corpo da página */
+body {
+    background-color: #408080!important;
+}
+
+/* Estilo para o texto e link de cadastro */
+.text-primary {
+    color: #008080; /* Cor azul para o link */
+    text-decoration: none; /* Remove o sublinhado padrão do link */
+}
+
+.text-primary:hover {
+    color: #008080; /* Cor azul mais escura quando o mouse passa em cima */
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+.text-center p {
+    font-size: 0.875rem; /* Ajusta o tamanho da fonte */
+}
+
+/* Estilo personalizado para o botão de login */
+.custom-btn {
+    background: linear-gradient(45deg, #00bfae, #1de9b6, #00c853, #64ffda); /* Gradiente multicolorido */
+    border: none; /* Remove bordas padrão */
+    border-radius: 50px; /* Arredonda os cantos */
+    color: white; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 1rem; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito no texto */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transição suave para efeitos */
+}
+
+.custom-btn:hover {
+    transform: scale(1.05); /* Aumenta o tamanho do botão ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra ao botão */
+}
+
+/* Estilo personalizado para os campos de entrada */
+.custom-input {
+    border: none; /* Remove a borda padrão */
+    border-bottom: 2px solid transparent; /* Linha invisível por padrão */
+    border-radius: 0; /* Remove o arredondamento dos cantos */
+    box-shadow: none; /* Remove a sombra padrão */
+    padding: 10px 0; /* Ajusta o espaçamento interno */
+    font-size: 1rem; /* Ajusta o tamanho da fonte */
+    transition: border-bottom 0.3s ease; /* Suaviza a transição de cor */
+    
+}
+
+.custom-input:focus {
+    border-bottom: 2px solid #00bfae; /* Linha verde-água ao focar */
+    outline: none; /* Remove o contorno padrão ao focar */
+    box-shadow: none; /* Remove qualquer sombra ao focar */
+}
+
+/* Estilo para o ícone de visualização de senha */
+.position-relative {
+    position: relative;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+.top-50 {
+    top: 50%;
+    
+}
+
+.end-0 {
+    right: 0;
+}
+
+.translate-middle-y {
+    transform: translateY(-50%);
+}
+
+.me-2 {
+    margin-right: 0.5rem;
+}
+
+.form-floating {
+    position: relative;
+    
+    margin-bottom: 1rem;
+}
+
+.form-floating label {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    transition: all 0.2s ease-out;
+    pointer-events: none;
+    color: #6c757d; /* Cor cinza do rótulo */
+    font-size: 1rem; /* Tamanho da fonte igual ao tamanho do campo de entrada */
+    font-weight: 400; /* Peso da fonte para manter a consistência */
+}
+
+.form-floating input:focus ~ label,
+.form-floating input:not(:placeholder-shown) ~ label {
+    top: -0.75rem; /* Move o rótulo para cima */
+    left: 0.75rem; /* Alinha o rótulo com o campo de entrada */
+    font-size: 1rem; /* Mantém o tamanho da fonte igual ao tamanho do campo de entrada */
+    color: #008080; /* Cor azul quando o campo está em foco */
+}
+
+.form-floating input {
+    padding: 1.5rem 0.75rem 0.75rem; /* Ajusta o padding para criar espaço para o rótulo flutuante */
+}
+
+.form-floating input:focus {
+    outline: none; /* Remove o contorno padrão ao focar */
+    box-shadow: none; /* Remove qualquer sombra ao focar */
+}
+
+.bg-light{
+	color:#008080!important;
+}
+
+
