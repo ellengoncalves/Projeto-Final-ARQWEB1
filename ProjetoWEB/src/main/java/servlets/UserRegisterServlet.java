@@ -10,9 +10,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import model.Area;
 import model.User;
 import model.util.users.UsersWriter;
+import model.Gender;
 
 @WebServlet("/userRegister")
 public class UserRegisterServlet extends HttpServlet{
@@ -30,7 +30,7 @@ public class UserRegisterServlet extends HttpServlet{
 		String email = req.getParameter("email");
 		String password = req.getParameter("password");
 		String dateOfBirth = req.getParameter("dateOfBirth");
-		String area = req.getParameter("area");
+		String gender = req.getParameter("gender");
 		
 		// instanciar um objeto User
 		User user = new User();
@@ -38,7 +38,7 @@ public class UserRegisterServlet extends HttpServlet{
 		user.setEmail(email);
 		user.setPassword(password);
 		user.setDateOfBirth(LocalDate.parse(dateOfBirth));
-		user.setArea(Area.valueOf(area));
+		user.setGender(Gender.valueOf(gender));
 		
 		RequestDispatcher dispatcher = null;
 		

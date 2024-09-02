@@ -37,7 +37,7 @@ public class LoginServlet extends HttpServlet{
 			resp.addCookie(cookie);
 			
 			req.setAttribute("user", user);
-			dispatcher = req.getRequestDispatcher("/homeServlet");
+			dispatcher = req.getRequestDispatcher("/home.jsp");
 		}else {
 			// remover o cookie
 			Cookie[] cookies = req.getCookies();
@@ -57,4 +57,3 @@ public class LoginServlet extends HttpServlet{
 		dispatcher.forward(req, resp);
 	}
 }
-

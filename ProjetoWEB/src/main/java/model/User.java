@@ -13,7 +13,7 @@ public class User implements Serializable {
 	private String email;
 	private String password;
 	private LocalDate dateOfBirth;
-	private Area area;
+	private Gender gender;
 
 	public Long getId() {
 		return id;
@@ -55,14 +55,6 @@ public class User implements Serializable {
 		this.dateOfBirth = dateOfBirth;
 	}
 
-	public Area getArea() {
-		return area;
-	}
-
-	public void setArea(Area area) {
-		this.area = area;
-	}
-
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);
@@ -78,6 +70,14 @@ public class User implements Serializable {
 			return false;
 		User other = (User) obj;
 		return Objects.equals(id, other.id);
+	}
+
+	public Gender getGender() {
+		return gender;
+	}
+
+	public void setGender(Gender gender) {
+		this.gender = gender;
 	}
 
 }

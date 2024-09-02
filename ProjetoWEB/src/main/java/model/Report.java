@@ -1,7 +1,6 @@
 package model;
 
 import java.io.Serializable;
-import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Objects;
 
@@ -10,10 +9,9 @@ public class Report implements Serializable {
 	
 	private Long id;
 	private ReportType type;
-	private LocalDate date;
+	private Neighborhood neighboorhood;
 	private LocalTime time;
-	private Area area;
-	private String street;
+	private String address;
 	private String description;
 	private User user;
 	
@@ -30,14 +28,6 @@ public class Report implements Serializable {
 	public void setType(ReportType type) {
 		this.type = type;
 	}
-	
-	public LocalDate getDate() {
-		return date;
-	}
-	public void setDate(LocalDate date) {
-		this.date = date;
-	}
-	
 	public LocalTime getTime() {
 		return time;
 	}
@@ -45,18 +35,18 @@ public class Report implements Serializable {
 		this.time = time;
 	}
 	
-	public Area getArea() {
-		return area;
+	public Neighborhood getNeighboorhood() {
+		return neighboorhood;
 	}
-	public void setArea(Area area) {
-		this.area = area;
+	public void setNeighboorhood(Neighborhood neighboorhood) {
+		this.neighboorhood = neighboorhood;
 	}
 	
-	public String getStreet() {
-		return street;
+	public String getAddress() {
+		return address;
 	}
-	public void setStreet(String street) {
-		this.street = street;
+	public void setAddress(String address) {
+		this.address = address;
 	}
 	
 	public String getDescription() {

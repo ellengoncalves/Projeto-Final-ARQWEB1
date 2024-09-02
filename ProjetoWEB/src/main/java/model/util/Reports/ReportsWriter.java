@@ -2,7 +2,7 @@ package model.util.Reports;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,17 +10,16 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import model.Report;
-import model.util.LocalDateTypeAdapter;
+import model.util.LocalTimeTypeAdapter;
 
 public class ReportsWriter {
 
 	public static Boolean write(Report report) {
 		Gson gson = new GsonBuilder()
-				.registerTypeAdapter(LocalDate.class, 
-						new LocalDateTypeAdapter())
+				.registerTypeAdapter(LocalTime.class, new LocalTimeTypeAdapter())
 				.create();
 		List<Report> reports = ReportsReader.read();
-		String path = "/home/aluno/Documentos/Ellen/WEB1/Workspace2/reports.json";
+		String path = "C:\\Users\\Ronaldo\\Documents\\TSI\\3º Semestre\\ARQWEB1\\web2_projeto\\report.json";
 		
 		if(reports == null) {
 			// quando não tem nenhum objeto cadastrado
@@ -51,11 +50,10 @@ public class ReportsWriter {
 
 	public static boolean update(Report report) {
 		Gson gson = new GsonBuilder()
-				.registerTypeAdapter(LocalDate.class, 
-						new LocalDateTypeAdapter())
+				.registerTypeAdapter(LocalTime.class, new LocalTimeTypeAdapter())
 				.create();
 		List<Report> reports = ReportsReader.read();
-		String path = "C:\\Users\\usuar\\Downloads\\ARQWEB1-2024-main\\ARQWEB1-2024-main\\ProjetoWeb\\src\\main\\webapp\\WEB-INF\\reports.json";
+		String path = "C:\\Users\\Ronaldo\\Documents\\TSI\\3º Semestre\\ARQWEB1\\web2_projeto\\reports.json";
 		
 		int index = 0;
 		for(Report a: reports) {
@@ -82,11 +80,11 @@ public class ReportsWriter {
 
 	public static boolean delete(Report report) {
 		Gson gson = new GsonBuilder()
-				.registerTypeAdapter(LocalDate.class, 
-						new LocalDateTypeAdapter())
+				.registerTypeAdapter(LocalTime.class, new LocalTimeTypeAdapter())
 				.create();
+		
 		List<Report> reports = ReportsReader.read();
-		String path = "C:\\Users\\usuar\\Downloads\\ARQWEB1-2024-main\\ARQWEB1-2024-main\\ProjetoWeb\\src\\main\\webapp\\WEB-INF\\reports.json";
+		String path = "C:\\Users\\Ronaldo\\Documents\\TSI\\3º Semestre\\ARQWEB1\\web2_projeto\\reports.json";
 		
 		reports.remove(report);
 		
@@ -105,4 +103,3 @@ public class ReportsWriter {
 		return true;
 	}
 }
-

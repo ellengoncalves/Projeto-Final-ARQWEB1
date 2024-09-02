@@ -22,7 +22,7 @@ public class UsersReader {
 						new LocalDateTypeAdapter())
 				.create();
 		List<User> users = null;
-		String path = "/home/aluno/Documentos/Ellen/WEB1/Workspace2/users.json";
+		String path = "C:\\Users\\Ronaldo\\Documents\\TSI\\3º Semestre\\ARQWEB1\\web2_projeto\\users.json";
 		try {
 			File file = new File(path);
 			if(file.exists()) {

@@ -21,7 +21,7 @@ public class UsersWriter {
 				.create();
 		
 		List<User> users = UsersReader.read();
-		String path = "/home/aluno/Documentos/Ellen/WEB1/Workspace2/users.json";
+		String path = "C:\\Users\\Ronaldo\\Documents\\TSI\\3º Semestre\\ARQWEB1\\web2_projeto\\users.json";
 		
 		if(users == null) {
 			// quando não tem nenhum objeto cadastrado
